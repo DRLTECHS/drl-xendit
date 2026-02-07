@@ -1,0 +1,50 @@
+{
+    "title": "transactions",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID who made the transaction"
+        },
+        "amount": {
+            "type": "number",
+            "description": "Transaction amount"
+        },
+        "currency": {
+            "type": "string",
+            "description": "Currency code (e.g., IDR, USD)"
+        },
+        "status": {
+            "type": "string",
+            "description": "Transaction status: pending, success, failed"
+        },
+        "payment_method": {
+            "type": "string",
+            "description": "Payment method used"
+        },
+        "external_id": {
+            "type": "string",
+            "description": "External transaction ID from payment provider"
+        },
+        "description": {
+            "type": "string",
+            "description": "Transaction description"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Transaction timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "amount",
+        "currency",
+        "status"
+    ]
+}

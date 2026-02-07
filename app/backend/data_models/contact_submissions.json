@@ -1,0 +1,41 @@
+{
+    "title": "contact_submissions",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "name": {
+            "type": "string",
+            "description": "Contact person name"
+        },
+        "email": {
+            "type": "string",
+            "description": "Contact email address"
+        },
+        "phone": {
+            "type": "string",
+            "description": "Contact phone number"
+        },
+        "message": {
+            "type": "string",
+            "description": "Contact message content"
+        },
+        "status": {
+            "type": "string",
+            "description": "Status: pending, read, replied"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Submission timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "email",
+        "message"
+    ]
+}
