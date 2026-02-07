@@ -5,6 +5,9 @@ import Index from '@/pages/Index';
 import AuthCallback from '@/pages/AuthCallback';
 import AuthError from '@/pages/AuthError';
 import LogoutCallbackPage from '@/pages/LogoutCallbackPage';
+import PrivacyPolicy from '@/pages/PrivacyPolicy';
+import TermsOfService from '@/pages/TermsOfService';
+import RefundPolicy from '@/pages/RefundPolicy';
 import AdminLogin from '@/pages/admin/Login';
 import AdminDashboard from '@/pages/admin/Dashboard';
 import AdminPaymentSettings from '@/pages/admin/PaymentSettings';
@@ -21,6 +24,11 @@ function App() {
           <Route path="/auth/callback" element={<AuthCallback />} />
           <Route path="/auth/error" element={<AuthError />} />
           <Route path="/logout/callback" element={<LogoutCallbackPage />} />
+          
+          {/* Policy Pages */}
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
           
           {/* Admin Routes */}
           <Route path="/admin/login" element={<AdminLogin />} />
