@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: drl-xendit-backend
+    env: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm run start
+    repository: https://github.com/DRLTECHS/drl-xendit.git
+    envVars:
+      NODE_ENV: production
+    autoDeploy: true
+
+  - type: web
+    name: drl-xendit-frontend
+    env: static
+    plan: starter
+    buildCommand: npm install && npm run build
+    publishPath: build
+    repository: https://github.com/DRLTECHS/drl-xendit.git
+    autoDeploy: true
+
+  - type: postgres
+    name: drl-xendit-database
+    plan: starter
+    dbVersion: postgres@13
+    autoDeploy: true
